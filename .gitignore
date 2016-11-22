@@ -1,0 +1,10 @@
+.build-output/
+.deploy/
+.idea/
+.idea/*
+!.idea/runConfigurations/
+**/bower_components/
+**/node_modules/
+*.DS_Store
+npm-debug.log
+coverage/
