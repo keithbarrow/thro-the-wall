@@ -19,5 +19,7 @@ function resizeStage(){
     renderer.resize(Math.ceil(STAGE_WIDTH  * ratio), Math.ceil(STAGE_HEIGHT * ratio));
 }
 
+//http://www.yeahbutisitflash.com/?p=5226
+
 resizeStage();
 
