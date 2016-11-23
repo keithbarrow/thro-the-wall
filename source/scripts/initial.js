@@ -9,7 +9,9 @@ var STAGE_WIDTH = 512,
     stage = new PIXI.Container();
 
 document.body.appendChild(renderer.view);
+renderer.backgroundColor = 0xffffff;
 renderer.render(stage);
+
 
 function resizeStage(){
     var ratio = Math.min(window.innerHeight / STAGE_HEIGHT, window.innerWidth / STAGE_WIDTH);
