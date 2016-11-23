@@ -2,14 +2,13 @@ var STAGE_WIDTH = 512,
     STAGE_HEIGHT = 192,
     renderer = PIXI.autoDetectRenderer(STAGE_WIDTH, STAGE_HEIGHT, {
         antialising: true,
-        transparent: false,
+        transparent: true,
         resolution: window.devicePixelRatio,
         autoResize: true
     }),
     stage = new PIXI.Container();
 
 document.body.appendChild(renderer.view);
-renderer.backgroundColor = 0xffffff;
 renderer.render(stage);
 
 
