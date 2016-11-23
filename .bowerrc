@@ -1,4 +1,4 @@
 {
-    "directory": "site/scripts/bower_components",
+    "directory": ".build-output/scripts/bower_components",
     "timeout": 120000
 }
