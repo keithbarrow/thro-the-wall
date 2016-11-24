@@ -18,6 +18,9 @@
   "homepage": "https://github.com/keithbarrow/thro-the-wall#readme",
   "devDependencies": {
     "bower": "^1.8.0",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-watch": "^4.3.11",
+    "live-reload": "^1.1.0"
   }
 }
