@@ -27,32 +27,17 @@ var STAGE_WIDTH = 256,
         }
     ;
 
-function Brick (parent, texture, position) {
-    var sprite = new PIXI.Sprite(texture);
+function Brick (texture, position) {
+    PIXI.Sprite.call(this, texture)
+    //var sprite = new PIXI.Sprite(texture);
     SPEED = 0.2;
-    sprite.height = OBJECT_HEIGHT;
-    sprite.width = BRICK_WIDTH;
-    sprite.position.x = position * BRICK_WIDTH;
-    sprite.position.y = 4;
-
-    parent.addChild(sprite);
-
-
-    return {
-        destroy: function(){
-
-        },
-        get colorName (){
-            return COLORS[row];
-        },
-        get position (){
-            return position;
-        },
-        get row (){
-            return row;
-        }
-    }
+    this.height = OBJECT_HEIGHT;
+    this.width = BRICK_WIDTH;
+    this.position.x = position * BRICK_WIDTH;
+    this.position.y = 4;
 }
+
+Brick.prototype = Object.create(PIXI.Sprite.prototype);
 
 function Row(parent, rowNumber) {
     var container = new PIXI.Container,
@@ -67,12 +52,16 @@ function Row(parent, rowNumber) {
     parent.addChild(container);
 
     for(var i=0; i < BRICKS; i++){
-        bricks.push(new Brick(container, brickTexture, i));
+        bricks.push(new Brick(brickTexture, i));
     }
 
     if(needsHalfBricks){
-        bricks.push(new Brick(container, brickTexture, i));
+        bricks.push(new Brick(brickTexture, i));
     }
+
+    bricks.forEach(function(brick){
+      container.addChild(brick);
+    })
 
     return {
         get needsHalfBricks (){
