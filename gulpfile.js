@@ -1,13 +1,17 @@
 const gulp = require('gulp'),
       less = require('gulp-less'),
       path = require('path'),
+      jshint = require('gulp-jshint'),
+      concat = require('gulp-concat'),
+      stylish = require('jshint-stylish'),
       watch = require('gulp-watch'),
       livereload = require('gulp-livereload'),
       BUILD_OUTPUT = './.build-output',
       HTML_GLOB = './source/html/**/*.html',
       CSS_GLOB = './source/less/**/*.less',
       IMAGE_GLOB = './source/images/**/*.*',
-      SCRIPT_GLOB = './source/scripts/**/*.js';
+      SCRIPTS = './source/scripts/',
+      SCRIPT_GLOB = SCRIPTS + '**/*.js';
 
 gulp.task('html', function(){
     return gulp.src(HTML_GLOB)
@@ -24,8 +28,18 @@ gulp.task('less', function(){
        .pipe(livereload());
 });
 
-gulp.task('scripts', function(){
+gulp.task ('lint', function (){
     return gulp.src(SCRIPT_GLOB)
+        .pipe(jshint())
+        .pipe(jshint.reporter('jshint-stylish'));
+});
+
+gulp.task('scripts', ['lint'], function(){
+    return gulp.src([SCRIPTS + 'constants.js',
+        SCRIPTS + 'display-objects/*.js',
+        SCRIPTS + 'initial.js'
+    ])
+        .pipe(concat('game.js'))
         .pipe(gulp.dest(BUILD_OUTPUT + '/scripts'))
         .pipe(livereload());
 });
