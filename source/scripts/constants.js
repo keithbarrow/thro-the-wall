@@ -12,6 +12,11 @@ var BRICKS = 16,
             HEIGHT: STANDARD_BLOCK,
             TEXTURE: PIXI.Texture.fromImage('images/bat.png')
         },
+        BALL: {
+            WIDTH: STANDARD_BLOCK,
+            HEIGHT: STANDARD_BLOCK,
+            TEXTURE: PIXI.Texture.fromImage('images/ball.png')
+        },
         BRICK: {
             WIDTH: STANDARD_BLOCK * 2,
             HEIGHT: STANDARD_BLOCK,

@@ -4,7 +4,7 @@ function Brick (rowNumber, position) {
     this.height = DISPLAY_OBJECTS.BRICK.HEIGHT;
     this.width = DISPLAY_OBJECTS.BRICK.WIDTH;
     this.position.x = position * this.width;
-    this.position.y = 4; //TODO  why does this work??
+    this.position.y = 0;
 }
 
 Brick.prototype = Object.create(PIXI.Sprite.prototype);

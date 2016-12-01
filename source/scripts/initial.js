@@ -14,7 +14,7 @@ function resizeStage(){
 
 function update(){
     resizeStage();
-    arena.bat.tempMovementFunction();
+    arena.update();
     renderer.render(arena);
     requestAnimationFrame(update);
 }
@@ -23,3 +23,6 @@ document.body.appendChild(renderer.view);
 requestAnimationFrame(update);
 
 //http://www.yeahbutisitflash.com/?p=5226
+//http://www.yeahbutisitflash.com/?p=5666
+//http://www.yeahbutisitflash.com/?p=6496 //TODO: Make Bricks into a sprite sheet, object pooling
+//http://www.yeahbutisitflash.com/?p=7046
