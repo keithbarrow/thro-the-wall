@@ -34,9 +34,17 @@ gulp.task ('lint', function (){
         .pipe(jshint.reporter('jshint-stylish'));
 });
 
+gulp .task('json', function(){
+    return gulp.src(SCRIPTS + '*.json')
+        .pipe(gulp.dest(BUILD_OUTPUT + '/scripts'))
+        .pipe(livereload());
+});
+
 gulp.task('scripts', ['lint'], function(){
     return gulp.src([SCRIPTS + 'constants.js',
         SCRIPTS + 'display-objects/*.js',
+        SCRIPTS + 'sprite-pool.js',
+        SCRIPTS + 'Main.js',
         SCRIPTS + 'initial.js'
     ])
         .pipe(concat('game.js'))
@@ -55,6 +63,7 @@ gulp.task('watch', function() {
     gulp.watch(CSS_GLOB, ['less']);
     gulp.watch(HTML_GLOB, ['html']);
     gulp.watch(SCRIPT_GLOB, ['scripts']);
+    gulp.watch(SCRIPTS + '*.json', ['json'])
 });
 
-gulp.task('default',['html', 'less', 'images', 'scripts', 'watch']);
+gulp.task('default',['html', 'less', 'images', 'json', 'scripts', 'watch']);

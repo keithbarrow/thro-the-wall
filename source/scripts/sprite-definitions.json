@@ -1,0 +1,133 @@
+{
+  "meta":
+  {
+    "app": "http://www.codeandweb.com/texturepacker ",
+    "version": "1.0",
+    "image": "../images/sprites.png",
+    "format": "RGBA8888",
+    "size": {"w": 112, "h": 8},
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:fc102f6475bdd4d372c..."
+  },
+  "frames": {
+    "bat": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 8
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 8
+      },
+      "sourceSize": { "w": 8, "h": 112 }
+    },
+    "brick-blue": {
+      "frame": {
+        "x": 24,
+        "y": 0,
+        "w": 16,
+        "h": 8
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 8
+      },
+      "sourceSize": { "w": 8, "h": 112 }
+    },
+    "brick-green": {
+      "frame": {
+        "x": 40,
+        "y": 0,
+        "w": 16,
+        "h": 8
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 8
+      },
+      "sourceSize": { "w": 8, "h": 112 }
+    },
+    "brick-magenta": {
+      "frame": {
+        "x": 56,
+        "y": 0,
+        "w": 16,
+        "h": 8
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 8
+      },
+      "sourceSize": { "w": 8, "h": 112 }
+    },
+    "brick-red": {
+      "frame": {
+        "x": 72,
+        "y": 0,
+        "w": 16,
+        "h": 8
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 8
+      },
+      "sourceSize": { "w": 8, "h": 112 }
+    },
+    "brick-yellow": {
+      "frame": {
+        "x": 88,
+        "y": 0,
+        "w": 16,
+        "h": 8
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 8
+      },
+      "sourceSize": { "w": 8, "h": 112 }
+    },
+    "ball": {
+      "frame": {
+        "x": 104,
+        "y": 0,
+        "w": 8,
+        "h": 8
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 8,
+        "h": 8
+      },
+      "sourceSize": { "w": 8, "h": 112 }
+    }
+  }
+}
